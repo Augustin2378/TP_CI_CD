@@ -19,7 +19,7 @@ jobs:
           distribution: 'corretto'
 
       - name: Build and test with Maven
-        run: mvn clean verify --file ./simpleapi/pom.xml
+        run: mvn clean verify --file ./simple-api/pom.xml
 
   build-and-push-docker-image:
     needs: test-backend
