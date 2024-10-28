@@ -2,9 +2,8 @@ name: CI devops 2024
 on:
   #to begin you want to launch this job in main and develop
   push:
-    branches:
-      - main
-      - develop
+    branches: main
+
   pull_request:
 
 jobs:
@@ -23,4 +22,5 @@ jobs:
 
       #finally build your app with the latest command
       - name: Build and test with Maven
-        run: mvn clean verify
+        run: mvn clean install --file ./simple-api/pom.xml
+
